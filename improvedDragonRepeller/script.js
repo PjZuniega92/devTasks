@@ -19,4 +19,9 @@ function goLite() {}
 
 function goDark() {}
 
-function changeTheme(colors) {}
+function changeTheme(colors) {
+  body.style.backgroundColor = colors[styles][0];
+  body.style.textColor = colors[styles][1];
+  changeColor.innerText = colors["button text"];
+  changeColor.onclick = colors["button function"];
+}
