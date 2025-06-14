@@ -1,6 +1,7 @@
 const changeColor = document.querySelector("#changeColor");
-changeColor.onclick = changeTheme;
-const bgTxtColor = [
+changeColor.onclick = goDark;
+const body = document.querySelector("body");
+const colors = [
   {
     name: "Dark",
     styles: ["#0d1b2a", "#e0e1dd"],
@@ -15,13 +16,17 @@ const bgTxtColor = [
   },
 ];
 
-function goLite() {}
+function goLite() {
+  changeTheme(colors[1]);
+}
 
-function goDark() {}
+function goDark() {
+  changeTheme(colors[0]);
+}
 
-function changeTheme(colors) {
-  body.style.backgroundColor = colors[styles][0];
-  body.style.textColor = colors[styles][1];
-  changeColor.innerText = colors["button text"];
-  changeColor.onclick = colors["button function"];
+function changeTheme(color) {
+  body.style.backgroundColor = color["styles"][0];
+  body.style.textColor = color["styles"][1];
+  changeColor.innerText = color["button text"];
+  changeColor.onclick = color["button function"];
 }
