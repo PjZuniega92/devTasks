@@ -26,7 +26,7 @@ function goDark() {
 
 function changeTheme(color) {
   body.style.backgroundColor = color["styles"][0];
-  body.style.textColor = color["styles"][1];
+  body.style.color = color["styles"][1];
   changeColor.innerText = color["button text"];
   changeColor.onclick = color["button function"];
 }
