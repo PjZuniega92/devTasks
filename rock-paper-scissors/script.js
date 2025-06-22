@@ -1,4 +1,10 @@
-let result = "";
+const rockBtn = document.getElementById("rockBtn");
+const paperBtn = document.getElementById("paperBtn");
+const scissorsBtn = document.getElementById("scissorsBtn");
+
+paperBtn.onclick = () => playGame("paper");
+rockBtn.onclick = () => playGame("rock");
+scissorsBtn.onclick = () => playGame("scissors");
 
 function whoWin() {
   let randomMove = Math.floor(Math.random() * 3);
@@ -15,6 +21,7 @@ function whoWin() {
 }
 
 function playGame(playerMove) {
+  let result = "";
   const computerMove = whoWin();
   if (playerMove === "scissors") {
     if (computerMove === "scissors") {
@@ -51,14 +58,3 @@ function playGame(playerMove) {
     );
   }
 }
-
-// function rock() {}
-
-// function paper() {
-//   const computerMove = whoWin();
-// }
-
-// function scissors() {
-//   whoWin();
-//   playGame(scissors);
-// }
