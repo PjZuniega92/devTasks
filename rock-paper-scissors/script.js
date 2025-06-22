@@ -14,38 +14,51 @@ function whoWin() {
   return computerMove;
 }
 
-function rock() {
+function playGame(playerMove) {
   const computerMove = whoWin();
-  if (computerMove === "rock") {
-    result = "Tie.";
-  } else if (computerMove === "paper") {
-    result = "You lose.";
-  } else if (computerMove === "scissors") {
-    result = "You win.";
+  if (playerMove === "scissors") {
+    if (computerMove === "scissors") {
+      result = "Tie.";
+    } else if (computerMove === "rock") {
+      result = "You win!";
+    } else if (computerMove === "paper") {
+      result = "You lose.";
+    }
+    alert(
+      `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
+    );
+  } else if (playerMove === "paper") {
+    if (computerMove === "paper") {
+      result = "Tie";
+    } else if (computerMove === "rock") {
+      result = "You win!";
+    } else if (computerMove === "scissors") {
+      result = "You lose.";
+    }
+    alert(
+      `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
+    );
+  } else if (playerMove === "rock") {
+    if (computerMove === "rock") {
+      result = "Tie.";
+    } else if (computerMove === "paper") {
+      result = "You lose.";
+    } else if (computerMove === "scissors") {
+      result = "You win.";
+    }
+    alert(
+      `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
+    );
   }
-  alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
 }
 
-function paper() {
-  const computerMove = whoWin();
-  if (computerMove === "paper") {
-    result = "Tie";
-  } else if (computerMove === "rock") {
-    result = "You win!";
-  } else if (computerMove === "scissors") {
-    result = "You lose.";
-  }
-  alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
-}
+// function rock() {}
 
-function scissors() {
-  const computerMove = whoWin();
-  if (computerMove === "scissors") {
-    result = "Tie.";
-  } else if (computerMove === "rock") {
-    result = "You win!";
-  } else if (computerMove === "paper") {
-    result = "You lose.";
-  }
-  alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
-}
+// function paper() {
+//   const computerMove = whoWin();
+// }
+
+// function scissors() {
+//   whoWin();
+//   playGame(scissors);
+// }
