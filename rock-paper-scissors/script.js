@@ -1,8 +1,8 @@
-let computerMove = "";
 let result = "";
 
 function whoWin() {
   let randomMove = Math.floor(Math.random() * 3);
+  let computerMove = "";
 
   if (randomMove === 1) {
     computerMove = "rock";
@@ -11,10 +11,11 @@ function whoWin() {
   } else {
     computerMove = "scissors";
   }
+  return computerMove;
 }
 
 function rock() {
-  whoWin();
+  const computerMove = whoWin();
   if (computerMove === "rock") {
     result = "Tie.";
   } else if (computerMove === "paper") {
@@ -26,7 +27,7 @@ function rock() {
 }
 
 function paper() {
-  whoWin();
+  const computerMove = whoWin();
   if (computerMove === "paper") {
     result = "Tie";
   } else if (computerMove === "rock") {
@@ -38,7 +39,7 @@ function paper() {
 }
 
 function scissors() {
-  whoWin();
+  const computerMove = whoWin();
   if (computerMove === "scissors") {
     result = "Tie.";
   } else if (computerMove === "rock") {
