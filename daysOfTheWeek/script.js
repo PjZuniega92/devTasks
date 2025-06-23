@@ -20,7 +20,6 @@ function update(day) {
     case "Monday":
       textUpdate.innerText =
         "Waah. It's Monday again, pressure is real! But, let's start this with positivity!";
-      console.log("Pressure is here!");
       break;
     case "Tuesday":
       textUpdate.innerText =
@@ -28,11 +27,11 @@ function update(day) {
       break;
     case "Wednesday":
       textUpdate.innerText =
-        "I am now in the middle of the work week. 2 more days to go to!";
+        "I am now in the middle of the work week. 2 more days to go!";
       break;
     case "Thursday":
       textUpdate.innerText =
-        "Thursday! Thursday! This is it. Gotta do my best to important meetings and deadline. Fridayyyy is approaching!";
+        "Thursday! Thursday! This is it. Gotta do my best to finish important meetings and deadline. Fridayyyy is approaching!";
       break;
     case "Friday":
       textUpdate.innerText =
