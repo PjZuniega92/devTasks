@@ -43,7 +43,7 @@ function update(day) {
       break;
     case "Sunday":
       textUpdate.innerText =
-        "Sunday! God and family day! a day of full happiness and rest! What a beautiful day. This is my favorite, my comfort day before Monday!";
+        "Sunday! God and family day! a day full of happiness and rest! What a beautiful day. This is my favorite and my comfort day before Monday!";
       break;
     default:
       textUpdate.innerText = "What a wonderful week!";
